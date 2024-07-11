@@ -1,0 +1,48 @@
+<html>
+<head>
+	<title>password generator</title>
+	<style>
+		*{
+		font-size:40px; font-family:Caliber;}
+		body {background-color:rgb(251, 253, 253);
+		}
+
+		.header {
+			background-color: rgb(70, 159, 249);
+			height: 100px;
+		}
+
+		.title {
+			text-align: center;
+			padding-top: 20px;
+		}
+
+		.main {
+			padding-top: 50px;
+		}
+	
+	</style>
+</head>
+<body>
+<center>
+	<header class="header"><h1 class="title">Password Generator</h1></header>
+<div class="main">
+<form action="{% url 'show' %}">
+	Select password length <select name="length">
+		<option value="4"> 4 </option>
+		<option value="6"> 6 </option>
+		<option value="8"> 8 </option>
+
+	</select>
+	<br><br>
+	<input type="checkbox" name="uc"> Uppercase </input>
+	<br><br>
+	<input type="checkbox" name="dg"> Digits </input>
+	<br><br>
+	<input type="submit" value="Generate">
+</form>
+</div>
+
+</center>
+</body>
+</html>
